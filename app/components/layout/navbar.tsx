@@ -9,8 +9,6 @@ import classNames from 'classnames'
 export default function Navbar() {
     const currentPath = usePathname()
 
-    console.log(currentPath)
-
     const links: NavbarLink[] = [
         {
             label: 'Dashboard',
