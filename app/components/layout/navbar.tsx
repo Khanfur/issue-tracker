@@ -21,23 +21,27 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className={ 'flex items-center space-x-6 border-b mb-5 px-5 h-14' }>
-            <Link href={ '/' }><PiBugBold size={ 24 }/></Link>
-            <ul className={ 'flex space-x-6' }>
-                { links.map(link =>
-                    <Link
-                        className={ classNames({
-                            'text-zinc-900': currentPath === link.href,
-                            'text-zinc-500': currentPath !== link.href,
-                            'hover:text-zinc-800 transition-colors': true
-                        }) }
-                        key={ link.href }
-                        href={ link.href }
-                    >
-                        { link.label }
-                    </Link>
-                ) }
-            </ul>
+        <nav className={ 'border-b mb-5 px-5 h-14' }>
+            <div className={ 'max-w-screen-lg my-0 mx-auto h-full flex' }>
+                <div className={ 'flex items-center space-x-6 ' }>
+                    <Link href={ '/' }><PiBugBold size={ 24 }/></Link>
+                    <ul className={ 'flex space-x-6' }>
+                        { links.map(link =>
+                            <Link
+                                className={ classNames({
+                                    'text-zinc-900': currentPath === link.href,
+                                    'text-zinc-500': currentPath !== link.href,
+                                    'hover:text-zinc-800 transition-colors': true
+                                }) }
+                                key={ link.href }
+                                href={ link.href }
+                            >
+                                { link.label }
+                            </Link>
+                        ) }
+                    </ul>
+                </div>
+            </div>
         </nav>
     )
 }

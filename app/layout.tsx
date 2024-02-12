@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <Theme>
           <Navbar/>
-          <main>{children}</main>
+          <main className={'max-w-screen-lg my-0 mx-auto'}>{children}</main>
       </Theme>
       </body>
     </html>
