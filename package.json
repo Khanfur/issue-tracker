@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma-format": "prisma format",
+    "migrate ": "prisma migrate dev"
   },
   "dependencies": {
+    "@prisma/client": "^5.9.1",
     "classnames": "^2.5.1",
     "next": "14.1.0",
     "prisma": "^5.9.1",
