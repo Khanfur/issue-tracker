@@ -1,14 +1,9 @@
-import { Button } from '@radix-ui/themes'
-import Link from 'next/link'
+import NewIssueDialog from '@/app/components/issues/new-issue-dialog'
 
 export default function IssuesPage() {
     return (
         <div>
-            <Button>
-                <Link href={ 'issues/new' }>
-                    New issue
-                </Link>
-            </Button>
+            <NewIssueDialog/>
         </div>
     )
 }
